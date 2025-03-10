@@ -61,7 +61,7 @@ export default function Contact() {
 
       <div className="mt-8 p-4 bg-gray-100 dark:bg-gray-800 rounded">
         <p>
-          Page Views: <ViewCount fallback="Loading..." />
+          Page Views: <ViewCount path="/contact" fallback="Loading..." />
         </p>
       </div>
     </div>

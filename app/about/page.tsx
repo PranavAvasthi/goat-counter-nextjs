@@ -16,7 +16,7 @@ export default function About() {
 
       <div className="mt-8 p-4 bg-gray-100 dark:bg-gray-800 rounded">
         <p>
-          Page Views: <ViewCount fallback="Loading..." />
+          Page Views: <ViewCount path="/about" fallback="Loading..." />
         </p>
         <p>
           Total Website Views: <TotalViews fallback="Loading..." />
