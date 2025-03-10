@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export default function About() {
   useEffect(() => {
     // Track custom event when about page is visited
-    GCEvent("/about", "About Page Visit");
+    GCEvent("/about?user=123", "About Page Visit");
   }, []);
 
   return (
