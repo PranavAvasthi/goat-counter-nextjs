@@ -1,6 +1,6 @@
 "use client";
 
-import { ViewCount, GCEvent } from "next-goatcounter";
+import { ViewCount, GCEvent, TotalViews } from "next-goatcounter";
 import { useEffect } from "react";
 
 export default function About() {
@@ -19,7 +19,7 @@ export default function About() {
           Page Views: <ViewCount fallback="Loading..." />
         </p>
         <p>
-          Total Website Views: <ViewCount />
+          Total Website Views: <TotalViews fallback="Loading..." />
         </p>
       </div>
     </div>

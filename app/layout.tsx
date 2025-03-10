@@ -28,7 +28,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GCScript siteUrl={"https://geek.goatcounter.com/count"} />
+        <GCScript
+          siteUrl="https://geek.goatcounter.com/count"
+          scriptSrc="//gc.zgo.at/count.js"
+        />
         {children}
       </body>
     </html>
