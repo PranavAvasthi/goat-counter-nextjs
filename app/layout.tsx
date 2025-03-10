@@ -1,9 +1,9 @@
-"use client";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { GCScript } from "next-goatcounter";
 import { useEffect } from "react";
+import GoatCounterClient from "./GoatCounterClient";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,17 +25,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (window.goatcounter && window.goatcounter.visit_count) {
-        clearInterval(interval);
-        window.goatcounter.visit_count({ append: "body" });
-      }
-    }, 100);
-
-    return () => clearInterval(interval); // Clean up interval on unmount
-  }, []);
-
   return (
     <html lang="en">
       <body
@@ -45,6 +34,7 @@ export default function RootLayout({
           siteUrl="https://geek.goatcounter.com/count"
           scriptSrc="//gc.zgo.at/count.js"
         />
+        <GoatCounterClient />
         {children}
       </body>
     </html>
